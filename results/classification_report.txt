@@ -1,0 +1,11 @@
+Classification report (test set)
+
+Class                             Precision     Recall   F1-score   Support
+----------------------------------------------------------------------------
+Tomato___Early_blight                0.8824     0.9000     0.8911       150
+Tomato___Late_blight                 0.9433     0.9333     0.9383       285
+Tomato___healthy                     0.9958     0.9958     0.9958       238
+----------------------------------------------------------------------------
+Accuracy                                                   0.9480       673
+Macro average                        0.9405     0.9430     0.9417       673
+Weighted average                     0.9483     0.9480     0.9481       673

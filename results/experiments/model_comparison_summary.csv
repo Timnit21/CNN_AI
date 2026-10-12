@@ -1,0 +1,3 @@
+model_id,architecture,total_params,trainable_params,train_time_sec,epochs_trained,best_val_loss,best_val_acc,test_acc,test_macro_f1,test_weighted_f1,false_healthy_count,false_healthy_rate,latency_p50_ms,latency_mean_ms
+model_a_custom_cnn,Custom 3-block CNN,12938819,12938819,811.66,10,0.4008,0.8161,0.7917,0.7576,0.7826,49,0.1169,19.42,20.51
+model_b_mobilenetv2_frozen,MobileNetV2 (Frozen ImageNet),2261827,3843,1157.47,20,0.2127,0.9212,0.8951,0.8814,0.8933,14,0.0334,148.19,149.42

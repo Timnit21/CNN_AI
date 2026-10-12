@@ -1,0 +1,85 @@
+{
+  "experiment_name": "p7_proposal_lr1e-3_bs64_drop50",
+  "architecture": "Proposal: Conv-BN-MaxPool blocks 32/64/128/256, GAP, Dense128",
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "dropout": 0.5,
+  "augmentation": "RandomFlip(horizontal); RandomRotation(0.1); RandomZoom(0.1); RandomContrast(0.1); Rescaling(1/255)",
+  "maximum_epochs": 20,
+  "epochs_trained": 8,
+  "best_validation_accuracy": 0.7087666988372803,
+  "best_validation_loss": 0.9961705803871155,
+  "early_stopping_triggered": true,
+  "early_stopping_monitor": "val_loss",
+  "early_stopping_patience": 5,
+  "reduce_lr_monitor": "val_loss",
+  "reduce_lr_factor": 0.5,
+  "reduce_lr_patience": 2,
+  "checkpoint_monitor": "val_accuracy",
+  "random_seed": 42,
+  "overfitting_observed": false,
+  "training_time_seconds": 1652.973,
+  "best_accuracy_epoch": 8,
+  "best_loss_epoch": 3,
+  "parameter_count": 423619,
+  "model_path": "models/experiments/p7_proposal_lr1e-3_bs64_drop50.keras",
+  "history_path": "results/phase7_histories/p7_proposal_lr1e-3_bs64_drop50.json",
+  "class_names": [
+    "Tomato___Early_blight",
+    "Tomato___Late_blight",
+    "Tomato___healthy"
+  ],
+  "history": {
+    "accuracy": [
+      0.8490445613861084,
+      0.9111465215682983,
+      0.9073248505592346,
+      0.9340764284133911,
+      0.9334394931793213,
+      0.9452229142189026,
+      0.9388535022735596,
+      0.9611464738845825
+    ],
+    "loss": [
+      0.3774116635322571,
+      0.23247015476226807,
+      0.2355317920446396,
+      0.1784662902355194,
+      0.1737314760684967,
+      0.15277206897735596,
+      0.1714760810136795,
+      0.12070506066083908
+    ],
+    "val_accuracy": [
+      0.4234769642353058,
+      0.42942050099372864,
+      0.5557206273078918,
+      0.4234769642353058,
+      0.6181277632713318,
+      0.4279346168041229,
+      0.5349182486534119,
+      0.7087666988372803
+    ],
+    "val_loss": [
+      1.9122310876846313,
+      1.4468746185302734,
+      0.9961705803871155,
+      1.7793816328048706,
+      1.1201088428497314,
+      2.5493860244750977,
+      1.7960768938064575,
+      1.0744962692260742
+    ],
+    "learning_rate": [
+      0.0010000000474974513,
+      0.0010000000474974513,
+      0.0010000000474974513,
+      0.0010000000474974513,
+      0.0010000000474974513,
+      0.0005000000237487257,
+      0.0005000000237487257,
+      0.0002500000118743628
+    ]
+  }
+}

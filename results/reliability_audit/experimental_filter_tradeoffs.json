@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "timestamp": "2026-10-12T08:56:42Z",
+    "sample_counts": {
+      "group_a_supported_tomato": 673,
+      "group_b_unsupported_tomato_diseases": 350,
+      "group_c_non_tomato_crops": 250
+    }
+  },
+  "metric_distributions": {
+    "vegetation_ratio": {
+      "group_a": {
+        "mean": 0.3981,
+        "std": 0.1288,
+        "median_p50": 0.4033,
+        "min": 0.1015,
+        "max": 0.9936
+      },
+      "group_b": {
+        "mean": 0.4037,
+        "std": 0.1681,
+        "median_p50": 0.3672,
+        "min": 0.1694,
+        "max": 0.9965
+      },
+      "group_c": {
+        "mean": 0.5542,
+        "std": 0.1384,
+        "median_p50": 0.5283,
+        "min": 0.2375,
+        "max": 0.9752
+      }
+    },
+    "laplacian_sharpness": {
+      "group_a": {
+        "mean": 3285.7937,
+        "std": 2596.0886,
+        "median_p50": 2665.2676,
+        "min": 62.1157,
+        "max": 8918.7607
+      },
+      "group_b": {
+        "mean": 2936.5925,
+        "std": 1811.6403,
+        "median_p50": 3241.6489,
+        "min": 35.094,
+        "max": 7237.666
+      },
+      "group_c": {
+        "mean": 2579.0102,
+        "std": 1500.9912,
+        "median_p50": 2518.3865,
+        "min": 109.6623,
+        "max": 7931.6514
+      }
+    },
+    "free_energy_score": {
+      "group_a": {
+        "mean": -11.8954,
+        "std": 10.6759,
+        "median_p50": -9.6656,
+        "min": -74.3065,
+        "max": -2.1503
+      },
+      "group_b": {
+        "mean": -8.2731,
+        "std": 4.5301,
+        "median_p50": -7.0585,
+        "min": -21.5494,
+        "max": -1.7349
+      },
+      "group_c": {
+        "mean": -8.9794,
+        "std": 5.6286,
+        "median_p50": -7.5146,
+        "min": -30.5538,
+        "max": -1.3532
+      }
+    }
+  },
+  "threshold_sweeps": {
+    "vegetation_screening": [
+      {
+        "threshold": 0.05,
+        "false_rejection_rate_group_a": 0.0,
+        "rejection_rate_group_b": 0.0,
+        "rejection_rate_group_c": 0.0
+      },
+      {
+        "threshold": 0.1,
+        "false_rejection_rate_group_a": 0.0,
+        "rejection_rate_group_b": 0.0,
+        "rejection_rate_group_c": 0.0
+      },
+      {
+        "threshold": 0.15,
+        "false_rejection_rate_group_a": 2.53,
+        "rejection_rate_group_b": 0.0,
+        "rejection_rate_group_c": 0.0
+      },
+      {
+        "threshold": 0.2,
+        "false_rejection_rate_group_a": 7.43,
+        "rejection_rate_group_b": 2.57,
+        "rejection_rate_group_c": 0.0
+      },
+      {
+        "threshold": 0.25,
+        "false_rejection_rate_group_a": 13.08,
+        "rejection_rate_group_b": 12.86,
+        "rejection_rate_group_c": 0.4
+      }
+    ],
+    "laplacian_blur_screening": [
+      {
+        "threshold": 20.0,
+        "false_rejection_rate_group_a": 0.0,
+        "rejection_rate_group_b": 0.0,
+        "rejection_rate_group_c": 0.0
+      },
+      {
+        "threshold": 50.0,
+        "false_rejection_rate_group_a": 0.0,
+        "rejection_rate_group_b": 1.14,
+        "rejection_rate_group_c": 0.0
+      },
+      {
+        "threshold": 100.0,
+        "false_rejection_rate_group_a": 0.3,
+        "rejection_rate_group_b": 2.57,
+        "rejection_rate_group_c": 0.0
+      },
+      {
+        "threshold": 150.0,
+        "false_rejection_rate_group_a": 0.45,
+        "rejection_rate_group_b": 4.29,
+        "rejection_rate_group_c": 0.8
+      },
+      {
+        "threshold": 200.0,
+        "false_rejection_rate_group_a": 1.93,
+        "rejection_rate_group_b": 5.14,
+        "rejection_rate_group_c": 2.4
+      }
+    ],
+    "free_energy_ood_screening": [
+      {
+        "threshold": -15.0,
+        "false_rejection_rate_group_a": 86.03,
+        "rejection_rate_group_b": 88.0,
+        "rejection_rate_group_c": 83.6
+      },
+      {
+        "threshold": -12.0,
+        "false_rejection_rate_group_a": 69.39,
+        "rejection_rate_group_b": 79.71,
+        "rejection_rate_group_c": 77.6
+      },
+      {
+        "threshold": -10.0,
+        "false_rejection_rate_group_a": 52.9,
+        "rejection_rate_group_b": 71.71,
+        "rejection_rate_group_c": 70.8
+      },
+      {
+        "threshold": -8.0,
+        "false_rejection_rate_group_a": 34.77,
+        "rejection_rate_group_b": 59.71,
+        "rejection_rate_group_c": 55.2
+      },
+      {
+        "threshold": -6.0,
+        "false_rejection_rate_group_a": 13.97,
+        "rejection_rate_group_b": 40.29,
+        "rejection_rate_group_c": 34.8
+      },
+      {
+        "threshold": -4.0,
+        "false_rejection_rate_group_a": 2.67,
+        "rejection_rate_group_b": 14.86,
+        "rejection_rate_group_c": 15.6
+      }
+    ]
+  }
+}

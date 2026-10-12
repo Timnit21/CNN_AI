@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "timestamp": "2026-10-11 17:20:00",
+    "os": "Windows 11 AMD64",
+    "cpu_cores": 8,
+    "tf_version": "2.21.0",
+    "benchmark_samples": 128,
+    "batch_size": 32,
+    "system_ram_gb": 15.73,
+    "system_avail_ram_start_gb": 5.99
+  },
+  "models": {
+    "Model_A_Custom_CNN": {
+      "parameters": {
+        "total": 12938819,
+        "trainable": 12938819,
+        "non_trainable": 0
+      },
+      "inference_batch_1": {
+        "mean_ms": 28.16,
+        "std_ms": 2.05,
+        "p50_ms": 27.63,
+        "p95_ms": 32.48
+      },
+      "inference_batch_32": {
+        "total_mean_ms": 398.92,
+        "per_image_ms": 12.47
+      },
+      "training_measured": {
+        "benchmark_samples": 128,
+        "batch_size": 32,
+        "steps_per_epoch": 4,
+        "epoch_1_warmup_seconds": 5.37,
+        "epoch_2_steady_seconds": 4.22,
+        "steady_step_latency_ms": 1047.37
+      },
+      "memory_usage": {
+        "process_rss_mb": 723.22,
+        "process_peak_rss_mb": 1633.0,
+        "process_private_mb": 1149.5,
+        "system_available_ram_gb": 5.67
+      },
+      "projections_labeled_as_estimates": {
+        "note": "ESTIMATE ONLY: Projected time = steady_step_latency * (num_samples / 32)",
+        "dataset_3140_train_samples": {
+          "steps_per_epoch": 99,
+          "estimated_seconds_per_epoch": 103.7,
+          "estimated_minutes_for_15_epochs": 25.9,
+          "estimated_minutes_for_30_epochs": 51.9
+        },
+        "dataset_6000_train_samples": {
+          "steps_per_epoch": 188,
+          "estimated_seconds_per_epoch": 196.9,
+          "estimated_minutes_for_15_epochs": 49.2,
+          "estimated_minutes_for_30_epochs": 98.5
+        },
+        "dataset_8000_train_samples": {
+          "steps_per_epoch": 250,
+          "estimated_seconds_per_epoch": 261.8,
+          "estimated_minutes_for_15_epochs": 65.5,
+          "estimated_minutes_for_30_epochs": 130.9
+        }
+      }
+    },
+    "Model_B1_MobileNetV2_Frozen": {
+      "parameters": {
+        "total": 2261827,
+        "trainable": 3843,
+        "non_trainable": 2257984
+      },
+      "inference_batch_1": {
+        "mean_ms": 162.58,
+        "std_ms": 6.4,
+        "p50_ms": 161.91,
+        "p95_ms": 174.12
+      },
+      "inference_batch_32": {
+        "total_mean_ms": 1215.25,
+        "per_image_ms": 37.98
+      },
+      "training_measured": {
+        "benchmark_samples": 128,
+        "batch_size": 32,
+        "steps_per_epoch": 4,
+        "epoch_1_warmup_seconds": 5.26,
+        "epoch_2_steady_seconds": 2.37,
+        "steady_step_latency_ms": 583.28
+      },
+      "memory_usage": {
+        "process_rss_mb": 815.94,
+        "process_peak_rss_mb": 3454.6,
+        "process_private_mb": 1243.98,
+        "system_available_ram_gb": 5.57
+      },
+      "projections_labeled_as_estimates": {
+        "note": "ESTIMATE ONLY: Projected time = steady_step_latency * (num_samples / 32)",
+        "dataset_3140_train_samples": {
+          "steps_per_epoch": 99,
+          "estimated_seconds_per_epoch": 57.7,
+          "estimated_minutes_for_15_epochs": 14.4,
+          "estimated_minutes_for_30_epochs": 28.9
+        },
+        "dataset_6000_train_samples": {
+          "steps_per_epoch": 188,
+          "estimated_seconds_per_epoch": 109.7,
+          "estimated_minutes_for_15_epochs": 27.4,
+          "estimated_minutes_for_30_epochs": 54.9
+        },
+        "dataset_8000_train_samples": {
+          "steps_per_epoch": 250,
+          "estimated_seconds_per_epoch": 145.8,
+          "estimated_minutes_for_15_epochs": 36.5,
+          "estimated_minutes_for_30_epochs": 72.9
+        }
+      }
+    },
+    "Model_B2_MobileNetV2_FineTune": {
+      "parameters": {
+        "total": 2261827,
+        "trainable": 2227715,
+        "non_trainable": 34112
+      },
+      "inference_batch_1": {
+        "mean_ms": 159.02,
+        "std_ms": 5.32,
+        "p50_ms": 158.29,
+        "p95_ms": 166.91
+      },
+      "inference_batch_32": {
+        "total_mean_ms": 1088.69,
+        "per_image_ms": 34.02
+      },
+      "training_measured": {
+        "benchmark_samples": 128,
+        "batch_size": 32,
+        "steps_per_epoch": 4,
+        "epoch_1_warmup_seconds": 30.6,
+        "epoch_2_steady_seconds": 14.51,
+        "steady_step_latency_ms": 3620.05
+      },
+      "memory_usage": {
+        "process_rss_mb": 1223.77,
+        "process_peak_rss_mb": 3526.07,
+        "process_private_mb": 1667.03,
+        "system_available_ram_gb": 5.33
+      },
+      "projections_labeled_as_estimates": {
+        "note": "ESTIMATE ONLY: Projected time = steady_step_latency * (num_samples / 32)",
+        "dataset_3140_train_samples": {
+          "steps_per_epoch": 99,
+          "estimated_seconds_per_epoch": 358.4,
+          "estimated_minutes_for_15_epochs": 89.6,
+          "estimated_minutes_for_30_epochs": 179.2
+        },
+        "dataset_6000_train_samples": {
+          "steps_per_epoch": 188,
+          "estimated_seconds_per_epoch": 680.6,
+          "estimated_minutes_for_15_epochs": 170.2,
+          "estimated_minutes_for_30_epochs": 340.3
+        },
+        "dataset_8000_train_samples": {
+          "steps_per_epoch": 250,
+          "estimated_seconds_per_epoch": 905.0,
+          "estimated_minutes_for_15_epochs": 226.2,
+          "estimated_minutes_for_30_epochs": 452.5
+        }
+      }
+    }
+  }
+}

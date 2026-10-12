@@ -1,0 +1,50 @@
+{
+  "experiment_name": "baseline_cnn",
+  "dataset": "PlantVillage tomato 3-class subset",
+  "class_names": [
+    "Tomato___Early_blight",
+    "Tomato___Late_blight",
+    "Tomato___healthy"
+  ],
+  "training_images": 3140,
+  "validation_images": 673,
+  "test_data_loaded": false,
+  "image_size": [
+    224,
+    224
+  ],
+  "batch_size": 32,
+  "maximum_epochs": 30,
+  "epochs_completed": 13,
+  "random_seed": 42,
+  "optimizer": "Adam",
+  "initial_learning_rate": 0.001,
+  "loss_function": "sparse_categorical_crossentropy",
+  "augmentation_mode": "enhanced",
+  "dropout_rate": 0.5,
+  "early_stopping_monitor": "val_loss",
+  "early_stopping_patience": 5,
+  "early_stopping_triggered": true,
+  "early_stopping_epoch": 13,
+  "reduce_lr_monitor": "val_loss",
+  "reduce_lr_patience": 2,
+  "reduce_lr_factor": 0.5,
+  "checkpoint_monitor": "val_accuracy",
+  "checkpoint_path": "models/experiments/candidate_enhanced_v2.keras",
+  "best_accuracy_epoch": 9,
+  "best_validation_accuracy": 0.8989598751068115,
+  "best_loss_epoch": 8,
+  "best_validation_loss": 0.2401776909828186,
+  "final_training_accuracy": 0.9232484102249146,
+  "final_validation_accuracy": 0.8677563071250916,
+  "final_training_loss": 0.1838693618774414,
+  "final_validation_loss": 0.3525051772594452,
+  "total_training_duration_seconds": 1010.61,
+  "average_epoch_duration_seconds": 77.34,
+  "history_csv_path": "results/candidate_enhanced_v2_history.csv",
+  "plots": {
+    "accuracy_plot": "results/training_accuracy.png",
+    "loss_plot": "results/training_loss.png"
+  },
+  "cost_function_note": "The sparse categorical cross-entropy cost function penalizes probabilistic error as L = -sum(log(p_true)). It reflects confidence divergence rather than just discrete errors."
+}

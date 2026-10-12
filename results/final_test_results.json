@@ -1,0 +1,89 @@
+{
+  "checkpoint": "models/final_crop_disease_cnn.keras",
+  "test_data_directory": "data/test",
+  "test_data_images": 673,
+  "test_data_used_for_training": false,
+  "test_data_used_for_validation": false,
+  "class_names": [
+    "Tomato___Early_blight",
+    "Tomato___Late_blight",
+    "Tomato___healthy"
+  ],
+  "image_size": [
+    224,
+    224,
+    3
+  ],
+  "batch_size": 32,
+  "shuffle": false,
+  "model_input_shape": [
+    null,
+    224,
+    224,
+    3
+  ],
+  "model_output_shape": [
+    null,
+    3
+  ],
+  "test_loss": 0.12267561600378839,
+  "test_accuracy": 0.9479940564635958,
+  "precision": 0.9482655697035857,
+  "recall": 0.9479940564635958,
+  "f1_score": 0.9480992180446375,
+  "macro_average": {
+    "precision": 0.9404712239505731,
+    "recall": 0.9430438842203549,
+    "f1_score": 0.9417196777256313,
+    "support": 673
+  },
+  "weighted_average": {
+    "precision": 0.9482655697035857,
+    "recall": 0.9479940564635958,
+    "f1_score": 0.9480992180446375,
+    "support": 673
+  },
+  "per_class": {
+    "Tomato___Early_blight": {
+      "precision": 0.8823529411764706,
+      "recall": 0.9,
+      "f1_score": 0.8910891089108911,
+      "support": 150
+    },
+    "Tomato___Late_blight": {
+      "precision": 0.9432624113475178,
+      "recall": 0.9333333333333333,
+      "f1_score": 0.9382716049382716,
+      "support": 285
+    },
+    "Tomato___healthy": {
+      "precision": 0.9957983193277311,
+      "recall": 0.9957983193277311,
+      "f1_score": 0.9957983193277311,
+      "support": 238
+    }
+  },
+  "confusion_matrix": [
+    [
+      135,
+      15,
+      0
+    ],
+    [
+      18,
+      266,
+      1
+    ],
+    [
+      0,
+      1,
+      237
+    ]
+  ],
+  "confusion_matrix_axes": {
+    "rows": "actual classes",
+    "columns": "predicted classes"
+  },
+  "phase8_test_passes": 1,
+  "historical_baseline_test_evaluation_exists": true
+}

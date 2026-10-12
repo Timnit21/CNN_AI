@@ -1,0 +1,7 @@
+Model,Best Validation Accuracy,Final Test Accuracy,Weighted Precision,Weighted Recall,Weighted F1,Macro F1,Selected
+Baseline (Phase 5: Conv32/64/128 + Flatten + Dense128),0.965825,0.947994,0.948266,0.947994,0.948099,0.941720,Yes
+Phase 7 Exp 1 (Proposal: Conv-BN 32/64/128/256 + GAP + Dense128; lr=1e-3; bs=32; drop=0.5),0.910847,——,——,——,——,——,No
+Phase 7 Exp 2 (Proposal: Conv-BN 32/64/128/256 + GAP + Dense128; lr=3e-4; bs=32; drop=0.5),0.942051,——,——,——,——,——,No
+Phase 7 Exp 3 (Proposal: Conv-BN 32/64/128/256 + GAP + Dense128; lr=1e-3; bs=32; drop=0.3),0.949480,——,——,——,——,——,No
+Phase 7 Exp 4 (Proposal: Conv-BN 32/64/128/256 + GAP + Dense128; lr=1e-3; bs=64; drop=0.5),0.708767,——,——,——,——,——,No
+Phase 7 Exp 5 (Compact: Conv-BN 32/64/128 + GAP + Dense128; lr=1e-3; bs=32; drop=0.5),0.872214,——,——,——,——,——,No

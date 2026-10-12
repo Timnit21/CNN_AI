@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "timestamp": "2026-10-12T08:32:38Z",
+    "model_path": "models\\final_crop_disease_cnn.keras",
+    "framework": "TensorFlow 2.21.0",
+    "provisional_thresholds": {
+      "min_score": 0.6,
+      "min_margin": 0.15
+    },
+    "eval_duration_seconds": 82.63
+  },
+  "group_a_supported_tomato": {
+    "total_samples": 673,
+    "raw_accuracy": 96.73,
+    "conclusive_accuracy": 97.42,
+    "conclusive_accepted_count": 659,
+    "inconclusive_rejected_count": 14,
+    "false_rejection_rate_frr": 2.08,
+    "acceptance_rate": 97.92,
+    "score_distribution": {
+      "mean": 0.961,
+      "std": 0.0968,
+      "median_p50": 0.9995,
+      "p25": 0.9897,
+      "p75": 1.0,
+      "p95": 1.0,
+      "min": 0.4821,
+      "max": 1.0,
+      "overconfident_ge_90_pct": 86.92,
+      "extreme_overconfident_ge_99_pct": 74.74
+    },
+    "margin_distribution": {
+      "mean": 0.9229,
+      "std": 0.1915,
+      "median_p50": 0.9991,
+      "p95": 1.0
+    },
+    "predicted_distribution": {
+      "Tomato___Early_blight": 145,
+      "Tomato___Late_blight": 289,
+      "Tomato___healthy": 239
+    },
+    "confusion_matrix": [
+      [
+        137,
+        13,
+        0
+      ],
+      [
+        8,
+        276,
+        1
+      ],
+      [
+        0,
+        0,
+        238
+      ]
+    ]
+  },
+  "group_b_unsupported_tomato_diseases": {
+    "total_samples": 350,
+    "false_acceptance_count": 325,
+    "false_acceptance_rate_far": 92.86,
+    "correct_rejection_count": 25,
+    "correct_rejection_rate": 7.14,
+    "score_distribution": {
+      "mean": 0.8891,
+      "std": 0.1394,
+      "median_p50": 0.9559,
+      "p25": 0.8205,
+      "p75": 0.9935,
+      "p95": 1.0,
+      "min": 0.4634,
+      "max": 1.0,
+      "overconfident_ge_90_pct": 64.86,
+      "extreme_overconfident_ge_99_pct": 29.43
+    },
+    "margin_distribution": {
+      "mean": 0.7818,
+      "std": 0.2743,
+      "median_p50": 0.9117,
+      "p95": 0.9999
+    },
+    "predicted_distribution": {
+      "Tomato___Early_blight": 226,
+      "Tomato___Late_blight": 103,
+      "Tomato___healthy": 21
+    }
+  },
+  "group_c_non_tomato_crop_leaves": {
+    "total_samples": 250,
+    "false_acceptance_count": 230,
+    "false_acceptance_rate_far": 92.0,
+    "correct_rejection_count": 20,
+    "correct_rejection_rate": 8.0,
+    "score_distribution": {
+      "mean": 0.87,
+      "std": 0.1491,
+      "median_p50": 0.943,
+      "p25": 0.7737,
+      "p75": 0.9961,
+      "p95": 1.0,
+      "min": 0.4265,
+      "max": 1.0,
+      "overconfident_ge_90_pct": 55.6,
+      "extreme_overconfident_ge_99_pct": 31.2
+    },
+    "margin_distribution": {
+      "mean": 0.7467,
+      "std": 0.2879,
+      "median_p50": 0.8873,
+      "p95": 1.0
+    },
+    "predicted_distribution": {
+      "Tomato___Early_blight": 95,
+      "Tomato___Late_blight": 132,
+      "Tomato___healthy": 23
+    }
+  },
+  "group_d_non_leaf_objects": {
+    "status": "EXCLUDED",
+    "reason": "No verified, appropriately labeled non-leaf dataset exists in project; omitted to strictly adhere to anti-fabrication standards."
+  }
+}

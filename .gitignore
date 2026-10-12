@@ -1,0 +1,75 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Local scratch and payload archives (never commit Colab payloads or scratch logs)
+scratch/
+
+# In-progress remote training workflows (keep Colab experiments isolated)
+src/experiments/
+notebooks/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Large local datasets (PlantVillage images - never commit raw image sets)
+data/
+
+# Model binaries: exclude full-size training checkpoints (>100MB)
+# Allow only the verified lightweight inference model (<50MB)
+models/*.keras
+!models/final_crop_disease_cnn_deploy.keras
+models/experiments/
+models/backups/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Environment variables & secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Temporary files
+*.tmp
+*.bak

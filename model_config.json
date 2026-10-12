@@ -1,0 +1,309 @@
+{
+  "model_metadata": {
+    "project_name": "AgriAI",
+    "system_name": "Tomato Leaf Disease Classification System",
+    "task": "Multi-class Image Classification",
+    "framework": "TensorFlow / Keras",
+    "framework_version": "2.21.0",
+    "model_name": "tomato_disease_cnn",
+    "config_version": "2.0.0"
+  },
+  "input_specification": {
+    "image_height": 224,
+    "image_width": 224,
+    "image_channels": 3,
+    "color_mode": "rgb",
+    "input_data_format": "channels_last",
+    "input_shape": [
+      null,
+      224,
+      224,
+      3
+    ],
+    "raw_pixel_range": [
+      0.0,
+      255.0
+    ],
+    "rescaling_layer": {
+      "layer_type": "Rescaling",
+      "scale": "1.0 / 255.0",
+      "offset": 0.0,
+      "normalized_range": [
+        0.0,
+        1.0
+      ],
+      "note": "Raw image pixel values [0, 255] are fed directly; the internal Rescaling layer normalizes to [0, 1]. Do NOT pre-normalize to avoid double-scaling."
+    }
+  },
+  "classes": {
+    "num_classes": 3,
+    "class_names": [
+      "Tomato___Early_blight",
+      "Tomato___Late_blight",
+      "Tomato___healthy"
+    ],
+    "label_to_index": {
+      "Tomato___Early_blight": 0,
+      "Tomato___Late_blight": 1,
+      "Tomato___healthy": 2
+    },
+    "index_to_label": {
+      "0": "Tomato___Early_blight",
+      "1": "Tomato___Late_blight",
+      "2": "Tomato___healthy"
+    },
+    "display_names": {
+      "Tomato___Early_blight": "Early Blight",
+      "Tomato___Late_blight": "Late Blight",
+      "Tomato___healthy": "Healthy"
+    },
+    "pathology_info": {
+      "Tomato___Early_blight": {
+        "scientific_name": "Alternaria solani",
+        "pathogen_type": "Fungal Pathogen",
+        "primary_symptoms": "Concentric dark brown rings with target-board pattern on older foliage, yellow chlorotic halo"
+      },
+      "Tomato___Late_blight": {
+        "scientific_name": "Phytophthora infestans",
+        "pathogen_type": "Oomycete Pathogen",
+        "primary_symptoms": "Rapidly expanding water-soaked irregular dark lesions, purplish-brown margins, white fuzzy sporulation in humidity"
+      },
+      "Tomato___healthy": {
+        "scientific_name": "Solanum lycopersicum",
+        "pathogen_type": "Disease-Free Foliage",
+        "primary_symptoms": "Uniform green coloration, intact cellular lamina, absence of necrotic lesions"
+      }
+    }
+  },
+  "architecture": {
+    "type": "Sequential Convolutional Neural Network (CNN)",
+    "layer_sequence": [
+      {
+        "index": 1,
+        "name": "image",
+        "type": "InputLayer",
+        "output_shape": [null, 224, 224, 3]
+      },
+      {
+        "index": 2,
+        "name": "rescaling",
+        "type": "Rescaling",
+        "scale": "1/255.0",
+        "output_shape": [null, 224, 224, 3]
+      },
+      {
+        "index": 3,
+        "name": "random_horizontal_flip",
+        "type": "RandomFlip",
+        "mode": "horizontal",
+        "active_during": "training_only"
+      },
+      {
+        "index": 4,
+        "name": "random_rotation",
+        "type": "RandomRotation",
+        "factor": 0.05,
+        "active_during": "training_only"
+      },
+      {
+        "index": 5,
+        "name": "random_zoom",
+        "type": "RandomZoom",
+        "factor": 0.10,
+        "active_during": "training_only"
+      },
+      {
+        "index": 6,
+        "name": "conv2d_32",
+        "type": "Conv2D",
+        "filters": 32,
+        "kernel_size": [3, 3],
+        "strides": [1, 1],
+        "padding": "same",
+        "activation": "relu",
+        "output_shape": [null, 224, 224, 32],
+        "parameters": 896
+      },
+      {
+        "index": 7,
+        "name": "max_pooling_2d_1",
+        "type": "MaxPooling2D",
+        "pool_size": [2, 2],
+        "strides": [2, 2],
+        "output_shape": [null, 112, 112, 32],
+        "parameters": 0
+      },
+      {
+        "index": 8,
+        "name": "conv2d_64",
+        "type": "Conv2D",
+        "filters": 64,
+        "kernel_size": [3, 3],
+        "strides": [1, 1],
+        "padding": "same",
+        "activation": "relu",
+        "output_shape": [null, 112, 112, 64],
+        "parameters": 18496
+      },
+      {
+        "index": 9,
+        "name": "max_pooling_2d_2",
+        "type": "MaxPooling2D",
+        "pool_size": [2, 2],
+        "strides": [2, 2],
+        "output_shape": [null, 56, 56, 64],
+        "parameters": 0
+      },
+      {
+        "index": 10,
+        "name": "conv2d_128",
+        "type": "Conv2D",
+        "filters": 128,
+        "kernel_size": [3, 3],
+        "strides": [1, 1],
+        "padding": "same",
+        "activation": "relu",
+        "output_shape": [null, 56, 56, 128],
+        "parameters": 73856
+      },
+      {
+        "index": 11,
+        "name": "max_pooling_2d_3",
+        "type": "MaxPooling2D",
+        "pool_size": [2, 2],
+        "strides": [2, 2],
+        "output_shape": [null, 28, 28, 128],
+        "parameters": 0
+      },
+      {
+        "index": 12,
+        "name": "flatten",
+        "type": "Flatten",
+        "output_shape": [null, 100352],
+        "parameters": 0
+      },
+      {
+        "index": 13,
+        "name": "dense_128",
+        "type": "Dense",
+        "units": 128,
+        "activation": "relu",
+        "output_shape": [null, 128],
+        "parameters": 12845184
+      },
+      {
+        "index": 14,
+        "name": "dropout_50_percent",
+        "type": "Dropout",
+        "rate": 0.5,
+        "active_during": "training_only"
+      },
+      {
+        "index": 15,
+        "name": "class_probabilities",
+        "type": "Dense",
+        "units": 3,
+        "activation": "softmax",
+        "output_shape": [null, 3],
+        "parameters": 387
+      }
+    ],
+    "parameter_summary": {
+      "trainable_parameters": 12938819,
+      "non_trainable_parameters": 0,
+      "total_parameters": 12938819
+    }
+  },
+  "training_configuration": {
+    "loss_function": {
+      "name": "sparse_categorical_crossentropy",
+      "type": "Cross-Entropy Loss (Log-Loss)",
+      "mathematical_form": "L = - \\sum_{i=1}^N \\log(p_{i, y_i})",
+      "explanation": "Calculates the negative log-likelihood of the true class label given the predicted softmax probabilities. Unlike 0/1 accuracy, cross-entropy penalizes overconfident incorrect predictions smoothly and proportionally to error magnitude."
+    },
+    "optimizer": {
+      "name": "Adam",
+      "learning_rate": 0.001,
+      "beta_1": 0.9,
+      "beta_2": 0.999,
+      "epsilon": 1e-7,
+      "amsgrad": false
+    },
+    "batch_size": 32,
+    "maximum_epochs": 30,
+    "random_seed": 42
+  },
+  "data_augmentation": {
+    "baseline_pipeline": {
+      "horizontal_flip": true,
+      "rotation_factor": 0.05,
+      "zoom_factor": 0.10,
+      "applied_split": "train_only",
+      "validation_and_test_augmentation": false
+    },
+    "enhanced_pipeline": {
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_factor": 0.10,
+      "zoom_factor": 0.15,
+      "brightness_factor": 0.15,
+      "contrast_factor": 0.15,
+      "translation_height_factor": 0.08,
+      "translation_width_factor": 0.08,
+      "applied_split": "train_only",
+      "validation_and_test_augmentation": false
+    }
+  },
+  "callbacks_configuration": {
+    "early_stopping": {
+      "monitor": "val_loss",
+      "patience": 5,
+      "restore_best_weights": true,
+      "mode": "min",
+      "purpose": "Halt training when validation loss stops improving for 5 consecutive epochs to prevent late-stage overfitting."
+    },
+    "reduce_lr_on_plateau": {
+      "monitor": "val_loss",
+      "factor": 0.5,
+      "patience": 2,
+      "min_lr": 1e-6,
+      "mode": "min",
+      "purpose": "Decay the learning rate by 50% when validation loss plateaus for 2 epochs, allowing finer convergence in weight space."
+    },
+    "model_checkpoint": {
+      "monitor": "val_accuracy",
+      "mode": "max",
+      "save_best_only": true,
+      "save_weights_only": false,
+      "purpose": "Persist the complete model architecture and weights corresponding to the highest validation accuracy achieved."
+    }
+  },
+  "dataset_split": {
+    "source_dataset": "PlantVillage Tomato RGB Subset",
+    "total_raw_images": 4500,
+    "exact_duplicates_removed": 14,
+    "total_unique_images": 4486,
+    "split_ratios": {
+      "train": 0.70,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "image_counts": {
+      "train": 3140,
+      "validation": 673,
+      "test": 673
+    },
+    "class_distribution_test": {
+      "Tomato___Early_blight": 150,
+      "Tomato___Late_blight": 285,
+      "Tomato___healthy": 238
+    },
+    "data_leakage_status": "Zero cross-split hash intersections verified"
+  },
+  "checkpoint_selection_policy": {
+    "primary_criterion": "Highest best validation accuracy",
+    "tie_breaker_criterion": "Lowest best validation loss",
+    "evaluation_split": "Validation set only",
+    "test_set_isolation": "Untouched during training and tuning; evaluated only once on the selected candidate"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "generation_timestamp_sec": 58.52398681640625,
+  "total_records": 23065,
+  "valid_unique_records": 4325,
+  "corrupted_images": 0,
+  "excluded_non_target_images": 14121,
+  "uncertain_labels": 0,
+  "exact_duplicates_excluded": 3943,
+  "test_leak_prevented_count": 676,
+  "specimen_clusters_total": 4304,
+  "specimen_clusters_multi_image": 21,
+  "split_counts": {
+    "train": 3028,
+    "val": 649,
+    "test_expanded": 648
+  },
+  "class_split_distribution": {
+    "Tomato___Late_blight": {
+      "train": 1244,
+      "test_expanded": 267,
+      "val": 266
+    },
+    "Tomato___healthy": {
+      "train": 1068,
+      "test_expanded": 228,
+      "val": 230
+    },
+    "Tomato___Early_blight": {
+      "val": 153,
+      "train": 716,
+      "test_expanded": 153
+    }
+  },
+  "source_class_distribution": {
+    "plantvillage": {
+      "Tomato___Early_blight": 850,
+      "Tomato___healthy": 1347,
+      "Tomato___Late_blight": 1616
+    },
+    "plantdoc": {
+      "Tomato___Early_blight": 88,
+      "Tomato___healthy": 63,
+      "Tomato___Late_blight": 111
+    },
+    "mendeley_pakistan": {
+      "Tomato___Early_blight": 84,
+      "Tomato___healthy": 116,
+      "Tomato___Late_blight": 50
+    }
+  }
+}
