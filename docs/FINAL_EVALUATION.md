@@ -4,7 +4,7 @@
 
 Phase 8 completes the model selection and final test evaluation for **AgriAI: Tomato Leaf Disease Classification Using Convolutional Neural Networks**. Model selection was determined strictly based on validation results across the baseline and all 5 Phase 7 hyperparameter experiments. 
 
-Following model selection, the chosen final model ([models/final_crop_disease_cnn.keras](file:///C:/Users/timnit/Desktop/CNN_AI/models/final_crop_disease_cnn.keras)) was evaluated once on the strictly held-out test split of 673 images.
+Following model selection, the chosen final model ([models/final_crop_disease_cnn_deploy.keras](../models/final_crop_disease_cnn_deploy.keras)) was evaluated once on the strictly held-out test split of 673 images. The deploy model is the same network with the training optimizer state removed (148 MB to 49 MB); outputs were verified identical on all 673 test images.
 
 ---
 

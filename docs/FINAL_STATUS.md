@@ -9,7 +9,7 @@ PROJECT STATUS: COMPLETE
 ## Core Project Summary
 
 - **Project Title**: AgriAI: Tomato Leaf Disease Classification Using Convolutional Neural Networks
-- **Workspace**: `C:\Users\timnit\Desktop\CNN_AI`
+- **Workspace**: Repository root
 - **Dataset**: PlantVillage Tomato 3-Class RGB Subset (4,486 unique valid images)
 - **Dataset Split**: Stratified 70% Train (3,140) / 15% Validation (673) / 15% Test (673), Seed 42
 

@@ -1,3 +1,5 @@
+> **Note**: This document is a reconstruction from edit history.
+
 # AgriAI: Tomato Leaf Disease Classification Using CNN
 
 ## 1. Project Overview
@@ -160,7 +162,7 @@ The difference between best validation accuracy (96.58%) and test accuracy (94.8
 
 ## 10. Confusion Matrix
 
-The confusion matrix on the 673 test images (rows = actual ground truth, columns = model prediction) is saved at [results/final_confusion_matrix.png](results/final_confusion_matrix.png):
+The confusion matrix on the 673 test images (rows = actual ground truth, columns = model prediction) is saved at [results/final_confusion_matrix.png](../results/final_confusion_matrix.png):
 
 ```text
 Actual \ Predicted       Early Blight    Late Blight      Healthy      Total

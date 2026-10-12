@@ -1,7 +1,7 @@
 # AgriAI: Project Completion Report
 
 **Project Title**: AgriAI: Tomato Leaf Disease Classification Using Convolutional Neural Networks  
-**Workspace**: `C:\Users\timnit\Desktop\CNN_AI`  
+**Workspace**: Repository root  
 **Execution Phase**: Completed through Phase 8 (Final Model Selection & Test Evaluation)  
 
 ---

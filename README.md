@@ -76,7 +76,7 @@ The finalized model is a 3-block convolutional neural network designed to captur
 ---
 
 ### Per-Epoch Training Progression & Diagnosis
-Source file: [`results/training_history.csv`](file:///C:/Users/timnit/Desktop/CNN_AI/results/training_history.csv)
+Source file: [`results/training_history.csv`](results/training_history.csv)
 
 | Epoch | Train Loss | Train Accuracy | Val Loss | Val Accuracy | Learning Rate | Status / Event |
 |:---:|:---:|:---:|:---:|:---:|:---:|---|
@@ -142,7 +142,7 @@ The test confusion matrix reveals why `Tomato___Early_blight` has the lowest F1-
 
 ### Scope and Limitations
 > [!IMPORTANT]
-> - **Domain Scope**: The model is trained exclusively on PlantVillage tomato leaf photographs taken under controlled conditions against uniform backgrounds.
+> - **Domain Scope**: The model is trained exclusively on PlantVillage tomato leaf photographs taken under controlled conditions against uniform backgrounds. Accuracy on field or real-world photos has not yet been measured.
 > - **Closed-World Output**: The network supports only the 3 trained classes (`Tomato___Early_blight`, `Tomato___Late_blight`, `Tomato___healthy`). It **always outputs one of these three classes**, even when presented with other plant crops, other tomato diseases, or arbitrary non-leaf objects.
 > - **Empirical OOD Risk**: As documented in Section 3, empirical auditing demonstrates that unsupported tomato diseases produce $>92\%$ false acceptance rates at high confidence under standard closed-world softmax. The model must not be used as an unguided clinical diagnostic tool in open-field farming without expert human verification.
 
@@ -207,7 +207,7 @@ python src/predict.py --eval-dir "data/test"
 
 ## 3. Reliability & Out-of-Distribution (OOD) Research
 
-An empirical reliability benchmark was conducted in [`results/reliability_audit/`](file:///C:/Users/timnit/Desktop/CNN_AI/results/reliability_audit/) to evaluate model behavior under open-world inputs:
+An empirical reliability benchmark was conducted in [`results/reliability_audit/`](results/reliability_audit/) to evaluate model behavior under open-world inputs:
 
 ### Benchmark Findings Across 4 Evaluation Groups
 

@@ -63,7 +63,7 @@
 - **Regularized Head**: Dense layer (128 units, ReLU) with Dropout (0.5) to mitigate co-adaptation.
 - **Output Layer**: 3-unit Softmax dense layer producing normalized class probabilities.
 - **Total Parameters**: 12,938,819 parameters (100% trainable).
-- **Recommended Visual**: Layer-by-layer architectural flow diagram ([results/model_architecture.png](file:///C:/Users/timnit/Desktop/CNN_AI/results/model_architecture.png)).
+- **Recommended Visual**: Layer-by-layer architectural flow diagram ([results/model_architecture.png](../results/model_architecture.png)).
 
 ---
 
@@ -111,7 +111,7 @@
   - Late Blight: **93.83% F1** (266 / 285 correct)
   - Early Blight: **89.11% F1** (135 / 150 correct)
 - **Generalization Gap**: Only −1.78% difference between validation and test accuracy.
-- **Recommended Visual**: Test confusion matrix heatmap ([results/final_confusion_matrix.png](file:///C:/Users/timnit/Desktop/CNN_AI/results/final_confusion_matrix.png)).
+- **Recommended Visual**: Test confusion matrix heatmap ([results/final_confusion_matrix.png](../results/final_confusion_matrix.png)).
 
 ---
 
