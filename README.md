@@ -207,7 +207,7 @@ python src/predict.py --eval-dir "data/test"
 
 ## 3. Reliability & Out-of-Distribution (OOD) Research
 
-An empirical reliability benchmark was conducted in [`results/reliability_audit/`](results/reliability_audit/) to evaluate model behavior under open-world inputs:
+An empirical reliability benchmark was conducted in [`results/reliability_audit/benchmark_report.md`](results/reliability_audit/benchmark_report.md) to evaluate model behavior under open-world inputs:
 
 ### Benchmark Findings Across 4 Evaluation Groups
 

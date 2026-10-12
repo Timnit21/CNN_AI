@@ -130,7 +130,7 @@ During Phase 7, five candidate models were trained and evaluated exclusively on 
 
 ## 8. Final Results
 
-Following model selection, the finalized model ([models/final_crop_disease_cnn.keras](models/final_crop_disease_cnn.keras)) was evaluated on the held-out **673-image test split**:
+Following model selection, the finalized model (`models/final_crop_disease_cnn.keras`) was evaluated on the held-out **673-image test split**:
 
 | Metric | Measured Value |
 |---|---:|
